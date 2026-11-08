@@ -1,0 +1,18 @@
+/Users/dhruvlagu/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+pilot window ('2024-01-01', '2024-03-31') candidates in window 243 pilot objects 200
+200 objects, 6 requests planned
+Type yes to start the download (each object can only be downloaded once): pull complete
+{
+  "objects": 200,
+  "zero_rows": 16,
+  "rows_median": 257.0,
+  "pass_3rec_14d_by_horizon": {
+    "30": 0.76,
+    "14": 0.79,
+    "7": 0.8,
+    "3": 0.795,
+    "1": 0.8
+  },
+  "note": "PREVIEW only: SATCAT decay is date-only; formal count needs decay-class time and altitude bands"
+}

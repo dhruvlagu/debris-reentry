@@ -1,0 +1,14 @@
+{
+  "after_filters": 9592,
+  "candidates": 6111,
+  "clusters": 1437,
+  "by_type": {
+    "DEBRIS": 3322,
+    "PAYLOAD": 1556,
+    "ROCKET BODY": 764,
+    "UNKNOWN": 469
+  },
+  "seed": 20261105,
+  "cap": 100,
+  "sha256": "1fa7d208d967af44e355a86691798a34b388c5f85968334a41e44ec1926010ab"
+}

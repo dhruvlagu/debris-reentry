@@ -1,0 +1,16 @@
+both: 4762 | gap > 1 day: 47 | gap > 30 days: 14
+{'count': 47.0, 'mean': 164.1, 'std': 384.5, 'min': 2.0, '25%': 2.5, '50%': 5.0, '75%': 197.0, 'max': 2341.0}
+                    sat         dm  gap_days
+NORAD_CAT_ID                                
+40284        2022-03-04 2015-10-06    2341.0
+44427        2022-01-22 2020-01-18     735.0
+50854        2022-01-21 2020-01-20     732.0
+45525        2023-04-14 2021-08-19     603.0
+36742        2023-05-30 2024-10-12     501.0
+60day msgs per candidate object {'count': 3800.0, 'mean': 5.3, 'std': 2.6, 'min': 1.0, '25%': 3.0, '50%': 5.0, '75%': 7.0, 'max': 19.0}
+lead-time quantiles (days) {0.0: -916.4, 0.05: 1.8, 0.25: 12.3, 0.5: 23.4, 0.75: 37.4, 0.95: 58.9, 1.0: 3066.7}
+objects with a 60day msg within +/-20% of 30 days before decay: 2788
+objects with a 60day msg within +/-20% of 14 days before decay: 2704
+objects with a 60day msg within +/-20% of 7 days before decay: 1167
+objects with a 60day msg within +/-20% of 3 days before decay: 363
+objects with a 60day msg within +/-20% of 1 days before decay: 25

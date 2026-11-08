@@ -1,0 +1,9 @@
+pairs 19015 | objects 166 | pairs: consecutive element sets 0.25 to 2 days apart, 14+ days before decay
+NAIVE (includes real decay drift and differences between objects; superseded):
+  SEMIMAJOR_AXIS | median diff km -0.525 | robust SD km 0.4107
+  PERIAPSIS | median diff km -0.44 | robust SD km 0.344
+  APOAPSIS | median diff km -0.555 | robust SD km 0.4552
+DRIFT-REMOVED (use this one): pairs 18862 | objects 148
+  SEMIMAJOR_AXIS | robust SD km 0.2158
+  PERIAPSIS | robust SD km 0.2125
+  APOAPSIS | robust SD km 0.248

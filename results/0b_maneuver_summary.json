@@ -1,0 +1,15 @@
+{
+  "objects": 184,
+  "too_few_sets_to_check": 8,
+  "flag_A": 7,
+  "flag_B": 26,
+  "flag_either": 32,
+  "constants": {
+    "sigma_a": 0.2158,
+    "sigma_p": 0.2125,
+    "K": 5,
+    "run": 3,
+    "ratio": 0.2,
+    "exclude_last_days": 3.0
+  }
+}

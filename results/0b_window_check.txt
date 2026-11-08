@@ -1,0 +1,16 @@
+/Users/dhruvlagu/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+t
+2015    0.71
+2016    0.56
+2017    0.52
+2018    0.29
+2019    0.08
+2020    0.00
+2021    0.23
+2022    0.30
+2023    0.67
+2024    0.67
+2025    0.62
+2026    0.78
+Name: kp, dtype: float64

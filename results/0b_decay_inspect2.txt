@@ -1,0 +1,11 @@
+               n  share_time  objects
+SOURCE                               
+60day_msg  49147       0.000     9233
+TIP_msg    20987       0.999     3160
+decay_msg  10172       0.000    10172
+satcat     12290       0.000    12290
+candidates with each source: {'60day_msg': 3800, 'TIP_msg': 1243, 'decay_msg': 4762, 'satcat': 6111}
+TIP msgs per object {'count': 1243.0, 'mean': 7.0, 'std': 1.7, 'min': 1.0, '25%': 6.0, '50%': 8.0, '75%': 8.0, 'max': 15.0}
+days from first TIP msg to last predicted decay {'count': 1243.0, 'mean': 3.7, 'std': 2.3, 'min': -12.8, '25%': 3.4, '50%': 4.0, '75%': 4.1, 'max': 48.1}
+objects with both satcat and decay_msg 4762 same calendar date 0.976
+abs hour difference {'count': 4762.0, 'mean': 39.2, 'std': 987.1, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 56184.0}

@@ -1,0 +1,129 @@
+{
+  "1_all_decayed_2015_2026": 12291,
+  "2_valid_decay_date": 12291,
+  "3_object_type_kept": 12291,
+  "4_match_STARLINK_by_type": {
+    "PAYLOAD": 1762,
+    "DEBRIS": 1
+  },
+  "4_match_ONEWEB_by_type": {
+    "PAYLOAD": 2
+  },
+  "4_match_IRIDIUM_by_type": {
+    "DEBRIS": 320,
+    "PAYLOAD": 65
+  },
+  "4_match_GLOBALSTAR_by_type": {},
+  "4_match_ORBCOMM_by_type": {
+    "DEBRIS": 28
+  },
+  "4_match_KUIPER_by_type": {
+    "PAYLOAD": 6
+  },
+  "4_match_GUOWANG_by_type": {},
+  "4_match_QIANFAN_by_type": {},
+  "4_match_FLOCK_by_type": {
+    "PAYLOAD": 505
+  },
+  "4_match_LEMUR_by_type": {
+    "PAYLOAD": 155
+  },
+  "4_match_DOVE_by_type": {
+    "PAYLOAD": 3
+  },
+  "4_match_SPACEBEE_by_type": {
+    "PAYLOAD": 201
+  },
+  "4_excluded_fleet_payloads": 2699,
+  "4_not_fleet_payload": 9592,
+  "satcat_sha256": "78893f9c0fba8035cc1e743f4d8cbefa1b8f0023dfc4281cf76b7ae7d849bf1e",
+  "storm_events_by_year_gap12h": {
+    "2015": 16,
+    "2016": 9,
+    "2017": 6,
+    "2018": 4,
+    "2019": 1,
+    "2021": 3,
+    "2022": 5,
+    "2023": 10,
+    "2024": 18,
+    "2025": 18,
+    "2026": 12
+  },
+  "storm_events_by_year_gap24h": {
+    "2015": 15,
+    "2016": 8,
+    "2017": 6,
+    "2018": 4,
+    "2019": 1,
+    "2021": 3,
+    "2022": 5,
+    "2023": 10,
+    "2024": 17,
+    "2025": 14,
+    "2026": 11
+  },
+  "storm_events_by_year_gap48h": {
+    "2015": 13,
+    "2016": 8,
+    "2017": 6,
+    "2018": 4,
+    "2019": 1,
+    "2021": 3,
+    "2022": 5,
+    "2023": 10,
+    "2024": 15,
+    "2025": 13,
+    "2026": 10
+  },
+  "kp6_blocks_by_year": {
+    "2015": 39,
+    "2016": 15,
+    "2017": 15,
+    "2018": 6,
+    "2019": 1,
+    "2021": 8,
+    "2022": 7,
+    "2023": 29,
+    "2024": 56,
+    "2025": 43,
+    "2026": 33
+  },
+  "distinct_parents_all": 1438,
+  "distinct_parents_debris": 601,
+  "top10_parents_by_decays": {
+    "1982-092": 1803,
+    "1999-025": 709,
+    "1993-036": 629,
+    "1998-067": 323,
+    "1997-051": 308,
+    "2022-151": 186,
+    "2011-037": 169,
+    "1994-074": 154,
+    "2019-006": 131,
+    "2018-084": 131
+  },
+  "total_if_capped_10_per_parent": 3842,
+  "total_if_capped_30_per_parent": 4802,
+  "total_if_capped_50_per_parent": 5266,
+  "kept_by_year": {
+    "2015": 460,
+    "2016": 243,
+    "2017": 186,
+    "2018": 179,
+    "2019": 316,
+    "2020": 372,
+    "2021": 452,
+    "2022": 2256,
+    "2023": 1720,
+    "2024": 1624,
+    "2025": 1183,
+    "2026": 601
+  },
+  "kept_by_type": {
+    "DEBRIS": 6802,
+    "PAYLOAD": 1557,
+    "ROCKET BODY": 764,
+    "UNKNOWN": 469
+  }
+}

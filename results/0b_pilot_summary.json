@@ -1,0 +1,13 @@
+{
+  "objects": 200,
+  "zero_rows": 16,
+  "rows_median": 257.0,
+  "pass_3rec_14d_by_horizon": {
+    "30": 0.76,
+    "14": 0.79,
+    "7": 0.8,
+    "3": 0.795,
+    "1": 0.8
+  },
+  "note": "PREVIEW only: SATCAT decay is date-only; formal count needs decay-class time and altitude bands"
+}
