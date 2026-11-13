@@ -1,0 +1,9 @@
+element sets 42404
+PUBLICATION LAG, hours (CREATION_DATE - EPOCH):
+  all: quantiles 50/90/99/99.9% [6.11, 13.15, 23.34, 133.05] | max 18850.9 | share < 0: 0.0002 | share > 24 h: 0.0092 | share > 72 h: 0.0018
+  by class, 99th percentile: {'DEBRIS': 28.9, 'PAYLOAD': 21.5, 'ROCKET BODY': 23.2, 'UNKNOWN': 17.7}
+  by days to decay, 99th percentile: {'last 3 d': 34.8, '3-14 d': 30.8, '>14 d': 22.4}
+RECOMPUTED minus GP FIELD, km (median / 99th percentile of absolute difference):
+  da_sma 0.0 / 0.0005
+  da_peri -0.0 / 0.0005
+  da_apo -0.0 / 0.0005

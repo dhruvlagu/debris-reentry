@@ -1,0 +1,31 @@
+candidates with no merged sets, by decay year and class:
+OBJECT_TYPE  DEBRIS  PAYLOAD  ROCKET BODY  UNKNOWN  All
+yr                                                     
+2015             11        3            2        0   16
+2016              9        0            2        0   11
+2017              8        1            1        0   10
+2018             11        1            0        0   12
+2019              6        0            0        0    6
+2020             12        0            0        0   12
+2021              9        0            1        0   10
+2022             31        2            1        1   35
+2023             82        1            0        0   83
+2024            105        6            2        1  114
+2025             78        5            1        0   84
+2026             96      121           56       51  324
+All             458      140           66       53  717
+share with no sets, by decay year:
+yr
+2015    0.943
+2016    0.939
+2017    0.933
+2018    0.919
+2019    0.978
+2020    0.962
+2021    0.970
+2022    0.955
+2023    0.921
+2024    0.905
+2025    0.908
+2026    0.365
+checksum-valid duplicate groups: 174811 | spread in a > 0.001 km: 820 | > 0.2158 km: 297 | max 26451.018 km

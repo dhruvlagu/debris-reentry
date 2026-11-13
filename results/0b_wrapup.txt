@@ -1,0 +1,23 @@
+near-circular duplicate groups over 0.2158 km: 111 | objects 101 | over 1 km: 31
+merged rows removed: 111 of 763350
+wrote data/frozen/tle_merged_dupfilt.csv and results/0b_dup_excluded.csv
+
+===== horizon 30 d: tight-label subset (last set within 24 h of label), post-cap rows =====
+block        test  train  validation   All
+OBJECT_TYPE                               
+DEBRIS         29    386         145   560
+PAYLOAD       110    277         270   657
+ROCKET BODY    43    175         118   336
+UNKNOWN        53     15          85   153
+All           235    853         618  1706
+share of scored set that is tight-label: 0.512
+
+===== horizon 14 d: tight-label subset (last set within 24 h of label), post-cap rows =====
+block        test  train  validation   All
+OBJECT_TYPE                               
+DEBRIS         29    461         156   646
+PAYLOAD       110    284         271   665
+ROCKET BODY    50    195         131   376
+UNKNOWN        54     16          85   155
+All           243    956         643  1842
+share of scored set that is tight-label: 0.531

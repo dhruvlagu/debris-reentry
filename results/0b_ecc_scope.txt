@@ -1,0 +1,18 @@
+objects by median eccentricity and class:
+cls        DEBRIS  PAYLOAD  ROCKET BODY  UNKNOWN   All
+ebin                                                  
+<=0.01       2284     1330          335      400  4349
+0.01-0.05     362       37          175       16   590
+0.05-0.1       72        7           17        0    96
+0.1-0.3        90        7           68        0   165
+>0.3           56       35          103        0   194
+All          2864     1416          698      416  5394
+objects with max apogee altitude above 2000 km: 386 of 5394
+500 km outlier objects: 332 | by ecc bin: {'<=0.01': 5, '0.01-0.05': 0, '0.05-0.1': 21, '0.1-0.3': 133, '>0.3': 173}
+duplicate groups over 0.2158 km: 297 | by ecc bin: {'<=0.01': 111, '0.01-0.05': 24, '0.05-0.1': 5, '0.1-0.3': 51, '>0.3': 106}
+near-circular objects (e<=0.01): duplicate groups 150606 | spread >0.2158 km: 111 | >1 km: 31 | max 123.538 km
+near-circular jump-flag rate by NOCK:
+        size    sum      mean
+NOCK                         
+0     619060  17145  0.027695
+1      27611    592  0.021441

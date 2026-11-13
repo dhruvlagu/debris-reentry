@@ -1,0 +1,12 @@
+candidates: 6111
+pairs 2000000 kept 0 sec 2
+file: data/raw/tle_bundles/2014/tle2014.txt | seconds: 4
+  cand_pairs: 336657
+  kept: 4073
+  line1_len_not_69_all_objects: 31
+  outside_window: 332584
+  pairs: 3180242
+  short_line_candidate_lost: 10
+  rejects among candidate pairs: {}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2014.csv

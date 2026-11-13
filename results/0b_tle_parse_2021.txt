@@ -1,0 +1,17 @@
+candidates: 6111
+pairs 2000000 kept 8953 sec 3
+pairs 4000000 kept 17055 sec 6
+pairs 6000000 kept 23119 sec 9
+pairs 8000000 kept 28863 sec 12
+pairs 10000000 kept 33983 sec 15
+pairs 12000000 kept 40814 sec 18
+pairs 14000000 kept 48140 sec 21
+file: data/raw/tle_bundles/2021/tle2021.txt | seconds: 23
+  cand_pairs: 1766173
+  kept: 54426
+  line1_len_not_69_all_objects: 100035
+  outside_window: 1711747
+  pairs: 15170011
+  rejects among candidate pairs: {}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2021.csv

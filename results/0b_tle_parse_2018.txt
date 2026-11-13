@@ -1,0 +1,16 @@
+candidates: 6111
+pairs 2000000 kept 4578 sec 2
+pairs 4000000 kept 7685 sec 4
+pairs 6000000 kept 12657 sec 7
+pairs 8000000 kept 18199 sec 9
+file: data/raw/tle_bundles/2018/tle2018.txt | seconds: 11
+  blank_lines_skipped: 4
+  cand_pairs: 913878
+  kept: 21566
+  line1_len_not_69_all_objects: 5653034
+  outside_window: 892312
+  pairs: 8821291
+  short_line_candidate_lost: 452877
+  rejects among candidate pairs: {}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2018.csv

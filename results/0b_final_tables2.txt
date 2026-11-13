@@ -1,0 +1,36 @@
+F10.7 flag days set to missing: 10 | range now 64.0 to 400.7
+block: mean F10.7 | share of days Kp>=6
+  train        88.0 | 0.017
+  validation  175.1 | 0.049
+  test        151.7 | 0.060
+SATCAT columns containing rcs: ['RCSVALUE', 'RCS_SIZE']
+
+horizon 30 d, RCS size by class:
+rcs          LARGE  MEDIUM  MISSING  SMALL   All
+OBJECT_TYPE                                     
+DEBRIS         139    1094        3    298  1534
+PAYLOAD        213     863        1      5  1082
+ROCKET BODY    362      15        0      0   377
+UNKNOWN         30     303        0      6   339
+All            744    2275        4    309  3332
+RCS size by block:
+rcs         LARGE  MEDIUM  MISSING  SMALL
+block                                    
+test          115     411        0     33
+train         341     850        4    131
+validation    288    1014        0    145
+
+horizon 14 d, RCS size by class:
+rcs          LARGE  MEDIUM  MISSING  SMALL   All
+OBJECT_TYPE                                     
+DEBRIS         144    1212        3    266  1625
+PAYLOAD        213     864        2      5  1084
+ROCKET BODY    400      19        0      0   419
+UNKNOWN         28     306        0      6   340
+All            785    2401        5    277  3468
+RCS size by block:
+rcs         LARGE  MEDIUM  MISSING  SMALL
+block                                    
+test          119     412        0     33
+train         366     962        5    116
+validation    300    1027        0    128

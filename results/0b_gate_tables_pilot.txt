@@ -1,0 +1,100 @@
+/Users/dhruvlagu/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+downloaded objects 200 of 6111 candidates | PARTIAL: dry run, edges provisional, verdict meaningless
+
+Tracking: last element set vs label (hours before label), by type; negative = last set after label
+             count   mean    std    min   10%   50%    90%     max
+OBJECT_TYPE                                                       
+DEBRIS        86.0  220.9  376.5   -6.2  27.3  99.3  535.3  2384.4
+PAYLOAD       56.0   49.6   58.7  -81.2  -1.2  40.6  114.5   236.1
+ROCKET BODY   23.0    9.0   13.3   -8.7  -5.0   7.8   18.7    53.9
+UNKNOWN       19.0   91.5  179.4 -345.7   3.7  82.9  168.9   671.8
+
+===== horizon 30 d =====  altitude tercile edges (km, PROVISIONAL): [332.4, 418.6]
+attrition: downloaded 200 | >=1 record before issue 157 | >=3 in 14 d 152 | not label-mismatch 149 | not Signature A 144 | after cap 30/cluster 144 | A-unchecked 16
+tracking requirement retention by tercile (of objects with a record):
+      size  sum   mean
+band                  
+high    52   47  0.904
+low     52   52  1.000
+mid     53   53  1.000
+retention by class:
+             size  sum   mean
+OBJECT_TYPE                  
+DEBRIS        100   71  0.710
+PAYLOAD        58   52  0.897
+ROCKET BODY    23   10  0.435
+UNKNOWN        19   19  1.000
+kept set by class: {'DEBRIS': 70, 'PAYLOAD': 46, 'UNKNOWN': 19, 'ROCKET BODY': 9} | by RCS size: {'MEDIUM': 103, 'LARGE': 26, 'SMALL': 15}
+kept set by year: {2024: 144}
+kept set, block x regime (window to decay):
+regime_window  disturbed  moderate  quiet
+block                                    
+validation            38        23     83
+kept set, regime in 3 days before issue: {'quiet': 130, 'disturbed': 7, 'moderate': 7}
+  threshold total: 144 vs 300 -> FAIL
+  threshold test block: 0 vs 100 -> FAIL
+  threshold disturbed overall: 38 vs 40 -> FAIL
+  threshold disturbed in test: 0 vs 15 -> FAIL
+  threshold independent storms in test disturbed windows: 0 vs 3 -> FAIL
+
+===== horizon 14 d =====  altitude tercile edges (km, PROVISIONAL): [297.4, 368.9]
+attrition: downloaded 200 | >=1 record before issue 167 | >=3 in 14 d 158 | not label-mismatch 154 | not Signature A 148 | after cap 30/cluster 148 | A-unchecked 16
+tracking requirement retention by tercile (of objects with a record):
+      size  sum   mean
+band                  
+high    56   49  0.875
+low     56   55  0.982
+mid     55   54  0.982
+retention by class:
+             size  sum   mean
+OBJECT_TYPE                  
+DEBRIS        100   72  0.720
+PAYLOAD        58   53  0.914
+ROCKET BODY    23   14  0.609
+UNKNOWN        19   19  1.000
+kept set by class: {'DEBRIS': 70, 'PAYLOAD': 46, 'UNKNOWN': 19, 'ROCKET BODY': 13} | by RCS size: {'MEDIUM': 104, 'LARGE': 31, 'SMALL': 13}
+kept set by year: {2024: 148}
+kept set, block x regime (window to decay):
+regime_window  disturbed  quiet
+block                          
+validation            37    111
+kept set, regime in 3 days before issue: {'quiet': 139, 'moderate': 8, 'disturbed': 1}
+  threshold total: 148 vs 300 -> FAIL
+  threshold test block: 0 vs 100 -> FAIL
+  threshold disturbed overall: 37 vs 40 -> FAIL
+  threshold disturbed in test: 0 vs 15 -> FAIL
+  threshold independent storms in test disturbed windows: 0 vs 3 -> FAIL
+
+===== horizon 7 d =====  altitude tercile edges (km, PROVISIONAL): [264.1, 337.0]
+attrition: downloaded 200 | >=1 record before issue 175 | >=3 in 14 d 160 | not label-mismatch 156 | not Signature A 150 | after cap 30/cluster 150 | A-unchecked 16
+tracking requirement retention by tercile (of objects with a record):
+      size  sum   mean
+band                  
+high    59   46  0.780
+low     59   58  0.983
+mid     57   56  0.982
+retention by class:
+             size  sum   mean
+OBJECT_TYPE                  
+DEBRIS        100   70  0.700
+PAYLOAD        58   53  0.914
+ROCKET BODY    23   19  0.826
+UNKNOWN        19   18  0.947
+kept set by class: {'DEBRIS': 68, 'PAYLOAD': 46, 'UNKNOWN': 18, 'ROCKET BODY': 18} | by RCS size: {'MEDIUM': 103, 'LARGE': 35, 'SMALL': 12}
+kept set by year: {2024: 150}
+kept set, block x regime (window to decay):
+regime_window  disturbed  quiet
+block                          
+validation            28    122
+kept set, regime in 3 days before issue: {'quiet': 148, 'disturbed': 2}
+  threshold total: 150 vs 300 -> FAIL
+  threshold test block: 0 vs 100 -> FAIL
+  threshold disturbed overall: 28 vs 40 -> FAIL
+  threshold disturbed in test: 0 vs 15 -> FAIL
+  threshold independent storms in test disturbed windows: 0 vs 3 -> FAIL
+
+Distinct storm events per split block (Kp>=6 merged), by merge gap:
+  12 h: {'train': 44, 'validation': 28, 'test': 28}
+  24 h: {'train': 42, 'validation': 27, 'test': 23}
+  48 h: {'train': 40, 'validation': 25, 'test': 21}

@@ -1,0 +1,3 @@
+objects 163 | windows 35423
+SIG_SP (perigee step, drift removed) km: 0.4036
+SIG_SA (apogee step, drift removed) km: 0.4809

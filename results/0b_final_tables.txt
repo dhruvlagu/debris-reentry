@@ -1,0 +1,59 @@
+F10.7 range -1.0 to 400.7 (sanity: about 60 to 300)
+solar-cycle check by block, calendar days: mean F10.7 | share of days with Kp>=6
+  train        87.8 | 0.017
+  validation  174.9 | 0.049
+  test        150.8 | 0.060
+
+===== horizon 30 d =====
+scored share of in-scope candidates, by class: {'DEBRIS': 0.487, 'PAYLOAD': 0.787, 'ROCKET BODY': 0.55, 'UNKNOWN': 0.874}
+       in_scope  scored  share
+DECAY                         
+2015        282     174  0.617
+2016        181      97  0.536
+2017        149      89  0.597
+2018        148      91  0.615
+2019        268     138  0.515
+2020        314     168  0.535
+2021        330     164  0.497
+2022        776     405  0.522
+2023       1047     637  0.608
+2024       1194     810  0.678
+2025        912     559  0.613
+median sets in 14 d before issue and median gap to label (h), by class:
+              n14  gap_h
+OBJECT_TYPE             
+DEBRIS       24.0   49.4
+PAYLOAD      32.0   16.1
+ROCKET BODY  29.0    9.8
+UNKNOWN      40.0   36.4
+window-mean F10.7 by block (median): {'test': 155.8, 'train': 91.0, 'validation': 172.0}
+eccentric share (e at issue > 0.01) by class: {'DEBRIS': 0.198, 'PAYLOAD': 0.052, 'ROCKET BODY': 0.517, 'UNKNOWN': 0.006}
+eccentric share by block: {'test': 0.073, 'train': 0.299, 'validation': 0.082}
+test: 559 objects | 49 distinct decay weeks | max in one week 24 | 247 clusters | max in one cluster 24
+
+===== horizon 14 d =====
+scored share of in-scope candidates, by class: {'DEBRIS': 0.516, 'PAYLOAD': 0.788, 'ROCKET BODY': 0.611, 'UNKNOWN': 0.876}
+       in_scope  scored  share
+DECAY                         
+2015        282     175  0.621
+2016        181      99  0.547
+2017        149      92  0.617
+2018        148      97  0.655
+2019        268     138  0.515
+2020        314     200  0.637
+2021        330     221  0.670
+2022        776     427  0.550
+2023       1047     647  0.618
+2024       1194     808  0.677
+2025        912     564  0.618
+median sets in 14 d before issue and median gap to label (h), by class:
+              n14  gap_h
+OBJECT_TYPE             
+DEBRIS       26.0   41.1
+PAYLOAD      33.0   16.0
+ROCKET BODY  30.0    9.8
+UNKNOWN      37.0   35.7
+window-mean F10.7 by block (median): {'test': 153.0, 'train': 87.3, 'validation': 172.6}
+eccentric share (e at issue > 0.01) by class: {'DEBRIS': 0.166, 'PAYLOAD': 0.043, 'ROCKET BODY': 0.511, 'UNKNOWN': 0.006}
+eccentric share by block: {'test': 0.071, 'train': 0.261, 'validation': 0.078}
+test: 564 objects | 49 distinct decay weeks | max in one week 24 | 249 clusters | max in one cluster 23

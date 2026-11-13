@@ -1,0 +1,30 @@
+2015 | overlap 8692 | differ 23 | rounding-level 1 | large 22
+   fields in large mismatches: {'raan': 15, 'ecc': 20, 'argp': 19, 'ndot': 18, 'incl': 12, 'mean_anom': 17, 'mean_motion': 21}
+   example: (('08425', '15322.78004123'), ['raan', 'ecc', 'argp'])
+   example: (('10235', '15293.85017053'), ['ndot', 'incl', 'raan', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+   example: (('40898', '15292.92185716'), ['ndot', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+2016 | overlap 17562 | differ 95 | rounding-level 14 | large 81
+   fields in large mismatches: {'ndot': 66, 'incl': 37, 'raan': 45, 'ecc': 60, 'argp': 67, 'mean_anom': 64, 'mean_motion': 72}
+   example: (('28313', '16211.31663551'), ['ndot', 'incl', 'raan', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+   example: (('26410', '16058.41109158'), ['mean_motion'])
+   example: (('39024', '16110.92342828'), ['ecc'])
+2017 | overlap 16180 | differ 44 | rounding-level 13 | large 31
+   fields in large mismatches: {'argp': 25, 'mean_motion': 29, 'ndot': 26, 'incl': 13, 'raan': 16, 'ecc': 23, 'mean_anom': 22}
+   example: (('11550', '17235.31881682'), ['argp', 'mean_motion'])
+   example: (('42769', '17247.95486942'), ['ndot', 'incl', 'raan', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+   example: (('41936', '17249.58784121'), ['ndot', 'incl', 'raan', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+2018 | overlap 23266 | differ 106 | rounding-level 19 | large 87
+   fields in large mismatches: {'ndot': 64, 'raan': 39, 'ecc': 62, 'argp': 63, 'mean_anom': 63, 'mean_motion': 82, 'incl': 25}
+   example: (('41528', '18091.41527101'), ['ndot', 'raan', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+   example: (('43086', '18328.74884119'), ['mean_motion'])
+   example: (('42913', '18321.91949905'), ['ndot', 'raan', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+2019 | overlap 17792 | differ 177 | rounding-level 29 | large 148
+   fields in large mismatches: {'ndot': 121, 'ecc': 97, 'argp': 124, 'mean_anom': 125, 'mean_motion': 137, 'incl': 56, 'raan': 64}
+   example: (('38525', '19351.84167907'), ['ndot', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+   example: (('43390', '19024.22007430'), ['ndot', 'incl', 'raan', 'ecc', 'argp', 'mean_anom', 'mean_motion'])
+   example: (('14631', '19277.85646681'), ['argp', 'mean_anom'])
+2020 | overlap 36996 | differ 208 | rounding-level 37 | large 171
+   fields in large mismatches: {'ndot': 138, 'ecc': 98, 'argp': 128, 'mean_anom': 130, 'mean_motion': 144, 'raan': 43, 'incl': 27}
+   example: (('45924', '20309.40908413'), ['ndot'])
+   example: (('36584', '20035.00068287'), ['ndot'])
+   example: (('45612', '20268.38323723'), ['ndot', 'ecc', 'argp', 'mean_anom', 'mean_motion'])

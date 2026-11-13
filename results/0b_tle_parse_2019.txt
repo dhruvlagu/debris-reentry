@@ -1,0 +1,15 @@
+candidates: 6111
+pairs 2000000 kept 9225 sec 2
+pairs 4000000 kept 18088 sec 5
+pairs 6000000 kept 25131 sec 8
+file: data/raw/tle_bundles/2019/tle2019.txt | seconds: 10
+  blank_lines_skipped: 3219
+  cand_pairs: 896441
+  kept: 30970
+  line1_len_not_69_all_objects: 4189171
+  outside_window: 865404
+  pairs: 7885065
+  short_line_candidate_lost: 351674
+  rejects among candidate pairs: {'checksum': 67}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2019.csv

@@ -1,0 +1,53 @@
+Kp rows 35064 | Kp missing (<0): 0 | non-definitive D != 1 or 2 rows: 0
+D value counts: {2: 34328, 1: 736}
+storm events (Kp>=6 blocks merged within 12 h) in 2015 to 2025: 96
+storm events (Kp>=6 blocks merged within 24 h) in 2015 to 2025: 84
+storm events (Kp>=6 blocks merged within 48 h) in 2015 to 2025: 78
+
+===== horizon 30 d (L24) =====
+regime to decay by block:
+reg_win     disturbed  moderate  quiet   All
+block                                       
+test              327       207     25   559
+train             466       576    284  1326
+validation        995       329    123  1447
+All              1788      1112    432  3332
+regime in 3 days before issue: {'quiet': 2453, 'moderate': 559, 'disturbed': 320}
+disturbed overall 1788 vs 40 -> PASS
+disturbed in test 327 vs 15 -> PASS
+distinct storm events in test disturbed windows: 13 vs 3 -> PASS
+distinct storm events across all disturbed windows: 78
+test disturbed objects per storm event (top 5): {72: 70, 66: 63, 75: 60, 71: 54, 67: 51}
+gate on post-cap rows: 5.5% over tolerance (limit 25%)
+
+===== horizon 14 d (L24) =====
+regime to decay by block:
+reg_win     disturbed  moderate  quiet   All
+block                                       
+test              240       242     82   564
+train             278       547    624  1449
+validation        592       402    461  1455
+All              1110      1191   1167  3468
+regime in 3 days before issue: {'quiet': 2644, 'moderate': 513, 'disturbed': 311}
+disturbed overall 1110 vs 40 -> PASS
+disturbed in test 240 vs 15 -> PASS
+distinct storm events in test disturbed windows: 12 vs 3 -> PASS
+distinct storm events across all disturbed windows: 77
+test disturbed objects per storm event (top 5): {72: 43, 67: 31, 76: 30, 66: 29, 75: 27}
+gate on post-cap rows: 8.9% over tolerance (limit 25%)
+
+===== horizon 7 d (L24) =====
+regime to decay by block:
+reg_win     disturbed  moderate  quiet   All
+block                                       
+test              152       228    188   568
+train             165       377    986  1528
+validation        375       343    757  1475
+All               692       948   1931  3571
+regime in 3 days before issue: {'quiet': 2807, 'moderate': 460, 'disturbed': 304}
+disturbed overall 692 vs 40 -> PASS
+disturbed in test 152 vs 15 -> PASS
+distinct storm events in test disturbed windows: 12 vs 3 -> PASS
+distinct storm events across all disturbed windows: 76
+test disturbed objects per storm event (top 5): {67: 24, 75: 20, 72: 18, 76: 17, 66: 16}
+gate on post-cap rows: 22.8% over tolerance (limit 25%)

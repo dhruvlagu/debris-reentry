@@ -1,0 +1,37 @@
+PART A: records read 200000 | pairs not starting '1 ' then '2 ': 0
+  trailing backslash: line1 1.0 | line2 0.0
+  line1 length (without newline), top 3: {70: 199501, 69: 499}
+  catalog field: non-digit entries 0 | examples: []
+  epoch order: share of consecutive records with EARLIER epoch: 0.5083 | median size of those decreases (hours): 1.92
+  epoch range of first 200k records: 2023-01-16 23:28:46.854048 to 2024-01-16 11:51:22.650624
+  pass 1: records 2500000
+  pass 1: records 5000000
+  pass 1: records 7500000
+  pass 1: records 10000000
+  pass 1: records 12500000
+  pass 1: records 15000000
+  pass 1: records 17500000
+
+PART B: bundle records for the 200 pilot objects: 20607 | objects: 174
+pilot gp rows 42404 | found in 2024 bundle: 0.4589
+  match rate by (epoch year, creation year):
+                           size    mean
+epoch_year creation_year               
+2023       2023           22807  0.0021
+           2024             167  1.0000
+           2026               2  0.0000
+2024       2024           19428  0.9904
+matched rows 19458 | mean motion |tle - gp| median: 0.0
+FILE ORDER among matched pilot rows: share of consecutive rows with EARLIER creation time: 0.2417 | EARLIER epoch: 0.3565
+Traceback (most recent call last):
+  File "/Users/dhruvlagu/Documents/Debris Reentry Project/src/00b_tle_probe.py", line 75, in <module>
+    print("  Spearman rank correlation of file position with CREATION_DATE:", round(float(mm.pos.corr(mm.CREATION_DATE.astype("int64"), method="spearman")), 4),
+  File "/Users/dhruvlagu/Library/Python/3.9/lib/python/site-packages/pandas/core/series.py", line 2991, in corr
+    return nanops.nancorr(
+  File "/Users/dhruvlagu/Library/Python/3.9/lib/python/site-packages/pandas/core/nanops.py", line 85, in _f
+    return f(*args, **kwargs)
+  File "/Users/dhruvlagu/Library/Python/3.9/lib/python/site-packages/pandas/core/nanops.py", line 1614, in nancorr
+    f = get_corr_func(method)
+  File "/Users/dhruvlagu/Library/Python/3.9/lib/python/site-packages/pandas/core/nanops.py", line 1629, in get_corr_func
+    from scipy.stats import spearmanr
+ModuleNotFoundError: No module named 'scipy'

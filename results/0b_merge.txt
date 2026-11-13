@@ -1,0 +1,23 @@
+files: ['tle2014.csv', 'tle2015.csv', 'tle2016.csv', 'tle2017.csv', 'tle2018.csv', 'tle2019.csv', 'tle2020.csv', 'tle2021.csv', 'tle2022.csv', 'tle2023.csv', 'tle2024.csv', 'tle2025.csv']
+rows read 945878 | duplicates dropped 182528 | kept 763350
+duplicates by dropped NOCK flag: {0: 175930, 1: 6598}
+flag_jump rate by NOCK (0 = checksum-valid, 1 = short):
+        size    sum      mean
+NOCK                         
+0     725646  31070  0.042817
+1      37704   1505  0.039916
+wrote data/frozen/tle_merged.csv rows 763350 | objects 5394
+rows per bundle year (SRC):
+SRC
+tle2014      4071
+tle2015     30479
+tle2016     17967
+tle2017     15085
+tle2018     20426
+tle2019     29657
+tle2020     38753
+tle2021     40676
+tle2022     95478
+tle2023    131846
+tle2024    195906
+tle2025    143006

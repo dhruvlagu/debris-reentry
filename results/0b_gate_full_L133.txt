@@ -1,0 +1,95 @@
+/Users/dhruvlagu/Documents/Debris Reentry Project/src/00b_gate_full.py:125: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  Y = Y.groupby('cluster', group_keys=False).apply(lambda g: g.sample(min(len(g), 30), random_state=SEED))
+/Users/dhruvlagu/Documents/Debris Reentry Project/src/00b_gate_full.py:125: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  Y = Y.groupby('cluster', group_keys=False).apply(lambda g: g.sample(min(len(g), 30), random_state=SEED))
+/Users/dhruvlagu/Documents/Debris Reentry Project/src/00b_gate_full.py:125: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  Y = Y.groupby('cluster', group_keys=False).apply(lambda g: g.sample(min(len(g), 30), random_state=SEED))
+using INTLDES mismatch single_source | L = 133.0 h | nock0 only: False
+candidates in scope (decay 2015 to 2025): 5601
+tercile edges loaded (frozen): {30: [338.1078333333332, 453.36636666666595], 14: [301.1407666666664, 416.03426666666655], 7: [272.06129999999933, 385.68179999999927]}
+
+===== horizon 30 d (edges 338.1, 453.4 km) =====
+attrition: in scope 5601 | >=1 set 4276 | >=3 in 14 d 4036 | not label mismatch 3983 | not Signature A 3861 | A-unchecked (kept) 665
+retention (>=3 sets) of objects with a set, by band:
+band
+high    0.881
+low     0.977
+mid     0.978
+by class:
+OBJECT_TYPE
+DEBRIS         0.914
+PAYLOAD        0.990
+ROCKET BODY    0.919
+UNKNOWN        0.989
+by block (>=3 sets share):
+block
+embargo       0.948
+test          0.962
+train         0.928
+validation    0.952
+after embargo and cap 30 per cluster: 3287
+by block: {'validation': 1435, 'train': 1288, 'test': 564}
+by class: {'DEBRIS': 1492, 'PAYLOAD': 1084, 'ROCKET BODY': 372, 'UNKNOWN': 339}
+by band: {'mid': 1265, 'low': 1070, 'high': 952}
+e at issue <= 0.01: 2726 | > 0.01: 561 | single-source labels: 641
+label-noise gate: 6.9% of objects over tolerance (72.0 h) -> PASS | last set within 24 h of label: 1910
+gap hours by class (median): {'DEBRIS': 64.7, 'PAYLOAD': 16.6, 'ROCKET BODY': 9.9, 'UNKNOWN': 37.8}
+threshold total 3287 vs 300 -> PASS | test 564 vs 100 -> PASS
+
+===== horizon 14 d (edges 301.1, 416.0 km) =====
+attrition: in scope 5601 | >=1 set 4519 | >=3 in 14 d 4137 | not label mismatch 4077 | not Signature A 3931 | A-unchecked (kept) 676
+retention (>=3 sets) of objects with a set, by band:
+band
+high    0.806
+low     0.979
+mid     0.977
+by class:
+OBJECT_TYPE
+DEBRIS         0.868
+PAYLOAD        0.986
+ROCKET BODY    0.910
+UNKNOWN        0.981
+by block (>=3 sets share):
+block
+embargo       0.926
+test          0.937
+train         0.909
+validation    0.913
+after embargo and cap 30 per cluster: 3390
+by block: {'validation': 1448, 'train': 1379, 'test': 563}
+by class: {'DEBRIS': 1574, 'PAYLOAD': 1085, 'ROCKET BODY': 392, 'UNKNOWN': 339}
+by band: {'mid': 1465, 'low': 992, 'high': 933}
+e at issue <= 0.01: 2862 | > 0.01: 528 | single-source labels: 641
+label-noise gate: 11.6% of objects over tolerance (33.6 h) -> PASS | last set within 24 h of label: 2029
+gap hours by class (median): {'DEBRIS': 52.3, 'PAYLOAD': 16.7, 'ROCKET BODY': 9.8, 'UNKNOWN': 37.2}
+threshold total 3390 vs 300 -> PASS | test 563 vs 100 -> PASS
+
+===== horizon 7 d (edges 272.1, 385.7 km) =====
+attrition: in scope 5601 | >=1 set 4710 | >=3 in 14 d 4250 | not label mismatch 4186 | not Signature A 4035 | A-unchecked (kept) 717
+retention (>=3 sets) of objects with a set, by band:
+band
+high    0.780
+low     0.968
+mid     0.981
+by class:
+OBJECT_TYPE
+DEBRIS         0.846
+PAYLOAD        0.981
+ROCKET BODY    0.927
+UNKNOWN        0.973
+by block (>=3 sets share):
+block
+embargo       0.927
+test          0.923
+train         0.897
+validation    0.899
+after embargo and cap 30 per cluster: 3517
+by block: {'train': 1488, 'validation': 1462, 'test': 567}
+by class: {'DEBRIS': 1655, 'PAYLOAD': 1085, 'ROCKET BODY': 440, 'UNKNOWN': 337}
+by band: {'mid': 1727, 'high': 969, 'low': 821}
+e at issue <= 0.01: 2977 | > 0.01: 540 | single-source labels: 651
+label-noise gate: 26.6% of objects over tolerance (16.8 h) -> FAIL | last set within 24 h of label: 2157
+gap hours by class (median): {'DEBRIS': 46.5, 'PAYLOAD': 16.4, 'ROCKET BODY': 9.8, 'UNKNOWN': 37.2}
+threshold total 3517 vs 300 -> PASS | test 567 vs 100 -> PASS
+
+wrote results/0b_gate_rows_H*_L133.csv

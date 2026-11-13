@@ -1,0 +1,89 @@
+using INTLDES mismatch single_source | L = 24.0 h | nock0 only: False
+candidates in scope (decay 2015 to 2025): 5601
+tercile edges loaded (frozen): {30: [338.1078333333332, 453.36636666666595], 14: [301.1407666666664, 416.03426666666655], 7: [272.06129999999933, 385.68179999999927]}
+
+===== horizon 30 d (edges 338.1, 453.4 km) =====
+attrition: in scope 5601 | >=1 set 4352 | >=3 in 14 d 4092 | not label mismatch 4038 | not Signature A 3900 | A-unchecked (kept) 670
+retention (>=3 sets) of objects with a set, by band:
+band
+high    0.862
+low     0.986
+mid     0.973
+by class:
+OBJECT_TYPE
+DEBRIS         0.910
+PAYLOAD        0.988
+ROCKET BODY    0.917
+UNKNOWN        0.986
+by block (>=3 sets share):
+block
+embargo       0.948
+test          0.953
+train         0.931
+validation    0.944
+embargo removed 104 | before cap 3796 | cap removed 464 | after 3332
+by block: {'validation': 1447, 'train': 1326, 'test': 559}
+by class: {'DEBRIS': 1534, 'PAYLOAD': 1082, 'ROCKET BODY': 377, 'UNKNOWN': 339}
+by band: {'low': 1329, 'mid': 1100, 'high': 903}
+e at issue <= 0.01: 2776 | > 0.01: 556 | single-source labels: 652
+label-noise gate: 6.3% of objects over tolerance (72.0 h) -> PASS | last set within 24 h of label: 1954
+gap hours by class (median): {'DEBRIS': 62.0, 'PAYLOAD': 16.8, 'ROCKET BODY': 9.8, 'UNKNOWN': 37.8}
+threshold total 3332 vs 300 -> PASS | test 559 vs 100 -> PASS
+
+===== horizon 14 d (edges 301.1, 416.0 km) =====
+attrition: in scope 5601 | >=1 set 4641 | >=3 in 14 d 4209 | not label mismatch 4148 | not Signature A 4001 | A-unchecked (kept) 697
+retention (>=3 sets) of objects with a set, by band:
+band
+high    0.779
+low     0.977
+mid     0.964
+by class:
+OBJECT_TYPE
+DEBRIS         0.855
+PAYLOAD        0.981
+ROCKET BODY    0.915
+UNKNOWN        0.981
+by block (>=3 sets share):
+block
+embargo       0.934
+test          0.927
+train         0.901
+validation    0.904
+embargo removed 108 | before cap 3893 | cap removed 425 | after 3468
+by block: {'validation': 1455, 'train': 1449, 'test': 564}
+by class: {'DEBRIS': 1625, 'PAYLOAD': 1084, 'ROCKET BODY': 419, 'UNKNOWN': 340}
+by band: {'low': 1410, 'mid': 1209, 'high': 849}
+e at issue <= 0.01: 2936 | > 0.01: 532 | single-source labels: 647
+label-noise gate: 10.6% of objects over tolerance (33.6 h) -> PASS | last set within 24 h of label: 2102
+gap hours by class (median): {'DEBRIS': 49.1, 'PAYLOAD': 16.4, 'ROCKET BODY': 9.8, 'UNKNOWN': 37.3}
+threshold total 3468 vs 300 -> PASS | test 564 vs 100 -> PASS
+
+===== horizon 7 d (edges 272.1, 385.7 km) =====
+attrition: in scope 5601 | >=1 set 4828 | >=3 in 14 d 4302 | not label mismatch 4230 | not Signature A 4070 | A-unchecked (kept) 745
+retention (>=3 sets) of objects with a set, by band:
+band
+high    0.732
+low     0.974
+mid     0.968
+by class:
+OBJECT_TYPE
+DEBRIS         0.827
+PAYLOAD        0.980
+ROCKET BODY    0.929
+UNKNOWN        0.967
+by block (>=3 sets share):
+block
+embargo       0.879
+test          0.910
+train         0.893
+validation    0.882
+embargo removed 104 | before cap 3966 | cap removed 395 | after 3571
+by block: {'train': 1528, 'validation': 1475, 'test': 568}
+by class: {'DEBRIS': 1674, 'PAYLOAD': 1085, 'ROCKET BODY': 476, 'UNKNOWN': 336}
+by band: {'low': 1451, 'mid': 1290, 'high': 830}
+e at issue <= 0.01: 3043 | > 0.01: 528 | single-source labels: 667
+label-noise gate: 25.2% of objects over tolerance (16.8 h) -> FAIL | last set within 24 h of label: 2229
+gap hours by class (median): {'DEBRIS': 42.1, 'PAYLOAD': 16.4, 'ROCKET BODY': 9.6, 'UNKNOWN': 37.1}
+threshold total 3571 vs 300 -> PASS | test 568 vs 100 -> PASS
+
+wrote results/0b_gate_rows_H*_L24_dupfilt.csv

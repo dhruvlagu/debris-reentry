@@ -1,0 +1,194 @@
+candidates: 6111
+pairs 2000000 kept 0 sec 2
+file: data/raw/tle_bundles/2014/tle2014.txt | seconds: 4
+  cand_pairs: 336657
+  kept: 4073
+  line1_len_not_69_all_objects: 31
+  outside_window: 332574
+  pairs: 3180242
+  short_line_candidate_lost: 10
+  rejects among candidate pairs: {'line1_len_68': 10}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2014.csv
+candidates: 6111
+pairs 2000000 kept 17673 sec 2
+pairs 4000000 kept 26015 sec 5
+file: data/raw/tle_bundles/2015/tle2015.txt | seconds: 5
+  cand_pairs: 472106
+  kept: 28067
+  line1_len_not_69_all_objects: 1297369
+  outside_window: 342799
+  pairs: 4521946
+  short_line_candidate_lost: 89465
+  rejects among candidate pairs: {'line1_len_68': 101240}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2015.csv
+candidates: 6111
+pairs 2000000 kept 5499 sec 2
+pairs 4000000 kept 9176 sec 4
+pairs 6000000 kept 13444 sec 6
+file: data/raw/tle_bundles/2016/tle2016.txt | seconds: 7
+  cand_pairs: 619370
+  kept: 14483
+  line1_len_not_69_all_objects: 3271716
+  outside_window: 351796
+  pairs: 6607130
+  short_line_candidate_lost: 223879
+  rejects among candidate pairs: {'line1_len_68': 253091}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2016.csv
+candidates: 6111
+pairs 2000000 kept 2928 sec 2
+pairs 4000000 kept 2948 sec 3
+pairs 6000000 kept 5837 sec 5
+file: data/raw/tle_bundles/2017/tle2017.txt | seconds: 7
+  cand_pairs: 726480
+  kept: 7866
+  line1_len_not_69_all_objects: 5722958
+  outside_window: 224995
+  pairs: 7672881
+  short_line_candidate_lost: 447020
+  rejects among candidate pairs: {'line1_len_68': 493619}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2017.csv
+candidates: 6111
+pairs 2000000 kept 2875 sec 2
+pairs 4000000 kept 4862 sec 4
+pairs 6000000 kept 7901 sec 6
+pairs 8000000 kept 11705 sec 8
+file: data/raw/tle_bundles/2018/tle2018.txt | seconds: 9
+  cand_pairs: 913878
+  desync_lines: 4
+  kept: 14169
+  line1_len_not_69_all_objects: 5653034
+  outside_window: 404712
+  pairs: 8821291
+  short_line_candidate_lost: 452877
+  rejects among candidate pairs: {'line1_len_68': 494995, 'line2_bad': 2}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2018.csv
+candidates: 6111
+pairs 2000000 kept 7208 sec 2
+pairs 4000000 kept 14325 sec 5
+pairs 6000000 kept 19937 sec 7
+file: data/raw/tle_bundles/2019/tle2019.txt | seconds: 10
+  cand_pairs: 896441
+  desync_lines: 3219
+  kept: 24455
+  line1_len_not_69_all_objects: 4189171
+  outside_window: 493826
+  pairs: 7885065
+  short_line_candidate_lost: 351674
+  rejects among candidate pairs: {'line1_len_68': 378093, 'line2_bad': 67}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2019.csv
+candidates: 6111
+pairs 2000000 kept 4369 sec 2
+pairs 4000000 kept 7525 sec 4
+pairs 6000000 kept 11051 sec 7
+pairs 8000000 kept 15840 sec 9
+pairs 10000000 kept 21846 sec 11
+file: data/raw/tle_bundles/2020/tle2020.txt | seconds: 14
+  cand_pairs: 1293913
+  desync_lines: 4562
+  kept: 28683
+  line1_len_not_69_all_objects: 6932921
+  outside_window: 609508
+  pairs: 11639718
+  short_line_candidate_lost: 615065
+  rejects among candidate pairs: {'line1_len_68': 655585, 'line2_bad': 137}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2020.csv
+candidates: 6111
+pairs 2000000 kept 8953 sec 3
+pairs 4000000 kept 17055 sec 6
+pairs 6000000 kept 23119 sec 8
+pairs 8000000 kept 28863 sec 11
+pairs 10000000 kept 33983 sec 14
+pairs 12000000 kept 40814 sec 17
+pairs 14000000 kept 48140 sec 20
+file: data/raw/tle_bundles/2021/tle2021.txt | seconds: 22
+  cand_pairs: 1766173
+  kept: 54426
+  line1_len_not_69_all_objects: 100035
+  outside_window: 1711747
+  pairs: 15170011
+  rejects among candidate pairs: {}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2021.csv
+candidates: 6111
+pairs 2000000 kept 13919 sec 3
+pairs 4000000 kept 31107 sec 6
+pairs 6000000 kept 46654 sec 9
+pairs 8000000 kept 58907 sec 12
+pairs 10000000 kept 70420 sec 15
+pairs 12000000 kept 86534 sec 18
+pairs 14000000 kept 101179 sec 21
+pairs 16000000 kept 117369 sec 24
+file: data/raw/tle_bundles/2022/tle2022.txt | seconds: 26
+  cand_pairs: 1985014
+  kept: 130150
+  line1_len_not_69_all_objects: 79021
+  outside_window: 1854785
+  pairs: 17173210
+  rejects among candidate pairs: {'checksum': 79}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2022.csv
+candidates: 6111
+pairs 2000000 kept 26324 sec 3
+pairs 4000000 kept 50965 sec 6
+pairs 6000000 kept 69798 sec 9
+pairs 8000000 kept 86436 sec 11
+pairs 10000000 kept 109083 sec 14
+pairs 12000000 kept 131850 sec 17
+pairs 14000000 kept 152910 sec 20
+file: data/raw/tle_bundles/2023/tle2023.txt | seconds: 22
+  cand_pairs: 1652238
+  desync_lines: 2
+  kept: 170493
+  line1_len_not_69_all_objects: 59046
+  outside_window: 1481674
+  pairs: 15737158
+  rejects among candidate pairs: {'checksum': 71}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2023.csv
+candidates: 6111
+pairs 2000000 kept 20390 sec 2
+pairs 4000000 kept 42604 sec 5
+pairs 6000000 kept 67390 sec 7
+pairs 8000000 kept 92308 sec 10
+pairs 10000000 kept 118496 sec 12
+pairs 12000000 kept 146915 sec 14
+pairs 14000000 kept 175492 sec 17
+pairs 16000000 kept 205947 sec 19
+pairs 18000000 kept 232661 sec 21
+file: data/raw/tle_bundles/2024/tle2024.txt | seconds: 23
+  cand_pairs: 1510366
+  kept: 251141
+  line1_len_not_69_all_objects: 43764
+  outside_window: 1259225
+  pairs: 19677820
+  rejects among candidate pairs: {}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2024.csv
+candidates: 6111
+pairs 2000000 kept 21681 sec 1
+pairs 4000000 kept 46763 sec 3
+pairs 6000000 kept 68477 sec 5
+pairs 8000000 kept 83958 sec 7
+pairs 10000000 kept 97135 sec 8
+pairs 12000000 kept 112876 sec 10
+pairs 14000000 kept 128099 sec 11
+pairs 16000000 kept 141503 sec 13
+pairs 18000000 kept 154965 sec 14
+pairs 20000000 kept 168466 sec 15
+file: data/raw/tle_bundles/2025/tle2025.txt | seconds: 16
+  cand_pairs: 696908
+  kept: 173568
+  line1_len_not_69_all_objects: 35776
+  outside_window: 523340
+  pairs: 20779601
+  rejects among candidate pairs: {}
+  candidate IDs above 99999 with kept records: {}
+output: data/frozen/tle_parsed/tle2025.csv
+MISSING data/raw/tle_bundles/2026/tle2026.txt

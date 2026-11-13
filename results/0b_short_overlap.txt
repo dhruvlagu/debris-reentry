@@ -1,0 +1,6 @@
+2015 | normal 370391 | short 101130 | overlap 8692 | identical 8669 (99.74%)
+2016 | normal 365809 | short 252850 | overlap 17562 | identical 17467 (99.46%)
+2017 | normal 232633 | short 485603 | overlap 16180 | identical 16136 (99.73%)
+2018 | normal 418488 | short 492715 | overlap 23266 | identical 23160 (99.54%)
+2019 | normal 517434 | short 377563 | overlap 17791 | identical 17614 (99.01%)
+2020 | normal 610764 | short 647184 | overlap 36990 | identical 36782 (99.44%)

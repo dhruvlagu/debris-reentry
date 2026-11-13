@@ -139,6 +139,8 @@ if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else ""
     if mode == "candidates": build_candidates()
     elif mode == "decay": pull_decay()
+    elif mode == "full":
+        print("DISABLED. Space-Track (reply received): gp_history is for ad-hoc one-time queries, not bulk. Use the yearly TLE zip bundles.")
     elif mode in ("pilot", "full"):
         cand = load_cand()
         if mode == "pilot":

@@ -1,0 +1,11 @@
+unparsed DECAY_EPOCH: 0 | unparsed MSG_EPOCH: 0
+candidates 6111 | with decay_msg 4762 | single-source (SATCAT only) 1349
+date mismatch >= 1 day (excluded): 115 | of those >= 2 days: 47
+TIP check (reporting only): objects 1235 | SATCAT date equals UTC date of last TIP decay: 0.857 | within +/-12 h of noon: 0.857
+TIP last decay minus SATCAT noon, hours, quantiles 5/25/50/75/95: [-15.3, -8.6, -2.3, 3.6, 10.3]
+Label-noise gate (resolution 20% of horizon, tolerance half of it, date-only label half-width 12 h):
+  30 d: tolerance  72.0 h vs 12.0 h -> PASS
+  14 d: tolerance  33.6 h vs 12.0 h -> PASS
+   7 d: tolerance  16.8 h vs 12.0 h -> PASS
+   3 d: tolerance   7.2 h vs 12.0 h -> FAIL (drop horizon)
+   1 d: tolerance   2.4 h vs 12.0 h -> FAIL (drop horizon)

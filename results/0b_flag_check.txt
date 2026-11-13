@@ -1,0 +1,26 @@
+              n  A   B  either
+OBJECT_TYPE                   
+DEBRIS       86  0  19      19
+PAYLOAD      56  5   6      10
+ROCKET BODY  23  2   0       2
+UNKNOWN      19  0   1       1
+ NORAD_CAT_ID        OBJECT_NAME      DECAY  flag_A_sma_rise  flag_B_burn
+         5154 THORAD AGENA D DEB 2024-01-30            False         True
+         9818     COSMOS 886 DEB 2024-01-24            False         True
+        22495          SL-16 DEB 2024-01-25            False         True
+        29276     TRANSIT 15 DEB 2024-01-23            False         True
+        48525    YUNHAI 1-02 DEB 2024-01-17            False         True
+        56160          CZ-4B DEB 2024-01-24            False         True
+        57659           AVUM DEB 2024-01-19            False         True
+        27629          SL-14 DEB 2024-02-10            False         True
+        29138     TRANSIT 14 DEB 2024-02-02            False         True
+        48513      RESURS O1 DEB 2024-02-07            False         True
+        31417     FENGYUN 1C DEB 2024-03-09            False         True
+        24777  DMSP 5D-2 F14 DEB 2024-01-03            False         True
+        34469    COSMOS 2251 DEB 2024-01-09            False         True
+        57658           AVUM DEB 2024-01-02            False         True
+        41735    WORLDVIEW 2 DEB 2024-02-28            False         True
+        42260  DMSP 5D-2 F13 DEB 2024-02-16            False         True
+        40573  DMSP 5D-2 F13 DEB 2024-03-28            False         True
+        55229          CZ-6A DEB 2024-03-28            False         True
+        56440  ORBCOMM FM 36 DEB 2024-03-28            False         True
