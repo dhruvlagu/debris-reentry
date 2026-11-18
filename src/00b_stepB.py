@@ -1,4 +1,4 @@
-"""Amended Signature B: sustained step in perigee with apogee roughly unchanged (PREREG Amendment 1).
+"""Amended Signature B: sustained step in perigee with apogee roughly unchanged (PREREG Amendment 30).
 Modes:  python3 src/00b_stepB.py sigma   -> prints sigma values for the step statistic (no flags counted)
         python3 src/00b_stepB.py apply   -> applies the rule, prints flags by object type and the debris check
 Local only, no network. Fill SIG_SP and SIG_SA from 'sigma' mode, date the lock in PREREG, then run 'apply'."""

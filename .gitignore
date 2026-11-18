@@ -1,2 +1,28 @@
 data/raw/tle_bundles/
 data/raw/tle_bundles/
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+# Secrets (Space-Track login)
+.env
+.env.*
+.netrc
+*.netrc
+credentials*
+secrets*
+# Raw provider data (Space-Track terms, PROTOCOL App B)
+data/raw/
+# Element sets derived from Space-Track TLEs. Re-pull with your own account; hashes are in CHECKSUMS.txt
+data/frozen/tle_parsed/
+data/frozen/tle_merged.csv
+data/frozen/tle_merged_dupfilt.csv
+data/frozen/tle2024_pilot_records.csv

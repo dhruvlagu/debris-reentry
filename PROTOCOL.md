@@ -120,6 +120,14 @@ These amendments were written post hoc on 11/03/2026, following the 10/30/2026 l
 11. Updated Appendix F Step 0A requirements (full citation, date read, read-in-full vs bibliography-only, amendment list including +/-20% baseline) and Step 14 requirements (both variants a and b reported).
 12. Bumped protocol header version from v3 to v4.
 
+### 6.6 Amendments adopted 11/14/2026
+
+Note: Renumbered 11/16/2026 to avoid collision with Sec 6.5 and PREREG.md numbering.
+
+28. Clarified Sections 8 and 9.0B that the same flat minimum of 3 tracking records created in the 14 days before issue applies in every altitude band; report retention by band. This resolves the internal wording conflict without changing the existing numeric minimum.
+29. Kept primary 0C estimates training-only and permitted validation data only for a separately labeled ICC sensitivity, with no calibration or tuning. This deviation is reported separately from the primary analysis.
+30. (11/16/2026) Signature B dropped after failing its debris false-positive criterion; see PREREG.md Amendment 30.
+
 ## 7. Design criteria and constraints
 
 Written before any modeling.
@@ -137,7 +145,7 @@ Written before any modeling.
 **Forecast task**
 - **Target:** remaining time to reentry in days, from issue time to the official decay time.
 - **Horizons:** 30, 14, 7, 3, and 1 days before reentry. Any horizon failing the label-noise gate (Step 0B) is dropped.
-- **Requirement:** at least 3 tracking records created in the 14 days before issue.
+- **Requirement:** at least 3 tracking records created in the 14 days before issue, using the same flat minimum in every altitude band. Report retention by band.
 - **Output:** a median forecast with 50% and 90% intervals.
 - **Error scale:** natural log of predicted over actual remaining time (errors grow with horizon), reported alongside absolute days.
 - **Reporting:** by actual lead time and by predicted-remaining-life bin, since a real user knows only the prediction. Interval calibration groups use the predicted bin.
@@ -182,7 +190,7 @@ Open verification items: Space-Track redistribution terms; bulk historical decay
   - Exclude objects with a maneuver signature that drag cannot produce: a sustained rise in semi-major axis, or a change in perigee with apogee roughly constant.
   - Exclude decays reported as controlled.
   - Count every exclusion.
-- **Tracking-history requirement is stratified by altitude band,** because a flat requirement biases the sample toward high-altitude, low-drag objects. Three altitude bands are used, measured at each horizon's issue time. Record which objects the requirement removes and state the scope accordingly.
+- **Tracking-history requirement:** apply the same flat minimum of 3 records created in the 14 days before issue in every altitude band. Three altitude bands are measured at each horizon's issue time; report retention by band, which objects the requirement removes, and the resulting scope.
 - Report counts by year, object class, altitude band, size, and regime, plus tracking coverage and the number of **distinct storm events** (Section 8). Count Kp of 6 or more events by year from GFZ data and check whether regime is confounded with solar-cycle phase.
 - **Label-noise gate:** compare official decay times with the last tracking record. The resolution of a horizon is defined as 20% of that horizon. Drop any horizon where label noise exceeds half its resolution for more than 25% of objects.
 - **Provisional thresholds** (justified or revised by 0C, with revisions logged):
@@ -192,7 +200,7 @@ Open verification items: Space-Track redistribution terms; bulk historical decay
 - **If disturbed thresholds fail,** the storm analysis is reported as descriptive only. **If total counts fail,** narrow to one object class or horizon range, or switch projects.
 
 ### 0C. Power by simulation
-Using only training-period data:
+Use training-period data for all primary estimates. A separately labeled ICC sensitivity may use validation-period data under Amendment 29; do not use validation data to calibrate variance or tune a model. Do not use final-test data.
 1. Run a crude empirical baseline and compute its errors.
 2. Estimate error variance per horizon and the correlation among objects decaying in the same week. Compute the effective sample size.
 3. Simulate paired baseline and candidate errors where the candidate is 10%, 15%, and 25% better, preserving the estimated correlation (also at zero and double the estimate).

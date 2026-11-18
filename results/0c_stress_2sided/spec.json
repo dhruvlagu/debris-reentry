@@ -1,0 +1,47 @@
+{
+ "seed": 20261114,
+ "sims": 2000,
+ "bootstrap": 199,
+ "alpha": 0.025,
+ "target": 0.15,
+ "rho_grid": [
+  0.3,
+  0.6
+ ],
+ "mult_grid": [
+  0.0,
+  1.0
+ ],
+ "scenarios": [
+  "null",
+  "uniform",
+  "cluster_half",
+  "week_half",
+  "ecc_scaled",
+  "circ_only"
+ ],
+ "per_horizon": {
+  "30": {
+   "n": 1286,
+   "n_weeks": 369,
+   "n_clusters": 705,
+   "ecc_frac": 0.29237947122861585,
+   "icc_week": 0.13941129615278733,
+   "icc_cluster": 0.35601211008682915,
+   "mad_centered": 0.2473512861954651
+  },
+  "14": {
+   "n": 1410,
+   "n_weeks": 370,
+   "n_clusters": 750,
+   "ecc_frac": 0.2560283687943262,
+   "icc_week": 0.15785229793424693,
+   "icc_cluster": 0.5221285767090597,
+   "mad_centered": 0.23600813237709217
+  }
+ },
+ "numpy": "2.0.2",
+ "pandas": "2.3.3",
+ "pq": "data/frozen/modelA_train.parquet",
+ "pq_sha256": "519df726d31ca9943760be4885c50faa9ff143b62d8e80e678ac7a56771e2f23"
+}

@@ -1,0 +1,57 @@
+{
+  "params": {
+    "window_d": 10.0,
+    "lag_h": 24.0,
+    "min_sets": 3,
+    "decay_alt_km": 120.0,
+    "ecc_cut": 0.01,
+    "re_km": 6378.137,
+    "min_days": 0.5,
+    "cap_days": 365.0,
+    "train_end": "2022-12-31"
+  },
+  "drop_jump_noncausal_diagnostic": false,
+  "cols": {
+    "SC": {
+      "obj": "NORAD_CAT_ID",
+      "hor": "H",
+      "decay": "label_h",
+      "cluster": "cluster",
+      "block": "block"
+    },
+    "TL": {
+      "obj": "NORAD_CAT_ID",
+      "epoch": "EPOCH",
+      "sma": "SEMIMAJOR_AXIS",
+      "peri": "PERIAPSIS",
+      "apo": "APOAPSIS",
+      "jump": "flag_jump"
+    }
+  },
+  "counts": {
+    "cap": {
+      "14": 74,
+      "30": 156
+    },
+    "floor": {
+      "14": 59,
+      "30": 47
+    },
+    "insufficient": {
+      "14": 39,
+      "30": 40
+    },
+    "ok": {
+      "14": 1277,
+      "30": 1083
+    }
+  },
+  "scored_sha256": {
+    "results/0b_gate_rows_H30_L24_dupfilt.csv": "12db0a7917a07c651a3903eb8e9ac7a31b62861e88995b2d7b16e3b42b5a88d8",
+    "results/0b_gate_rows_H14_L24_dupfilt.csv": "6d7fe1934932535c61128cc4c82807218d453e47ad6f2432ce39769831db2d3d"
+  },
+  "tle_sha256": "32a99648ff0ba6635baaaf424bf48adfaef42cbd464e2cca02a6ed4fb1a7b897",
+  "out_sha256": "519df726d31ca9943760be4885c50faa9ff143b62d8e80e678ac7a56771e2f23",
+  "n_in": 2775,
+  "n_out": 2696
+}

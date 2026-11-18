@@ -1,0 +1,97 @@
+{
+  "args": {
+    "data": "data/frozen/modelA_train.parquet",
+    "seed": 20261114,
+    "out": "results/0c_smoke",
+    "nsim": 100,
+    "nboot": 99,
+    "alpha": 0.05,
+    "effects": [
+      0.0,
+      0.1,
+      0.15,
+      0.25
+    ],
+    "corr_mult": [
+      0,
+      1,
+      2
+    ],
+    "pair_r": [
+      0.3,
+      0.6,
+      0.9
+    ],
+    "center": true,
+    "df": null,
+    "horizons": [
+      30,
+      14
+    ],
+    "storms": [
+      13,
+      12
+    ],
+    "disturbed_n": [
+      327,
+      240
+    ]
+  },
+  "cols": {
+    "hor": "horizon_d",
+    "decay": "decay_time",
+    "pred": "pred_days",
+    "true": "true_days",
+    "cluster": "cluster_id",
+    "block": "block",
+    "ecc": "ecc"
+  },
+  "data_sha256": "519df726d31ca9943760be4885c50faa9ff143b62d8e80e678ac7a56771e2f23",
+  "git": "5c3c9ef437a3036346bc39d422c6fff689a0b061",
+  "numpy": "2.0.2",
+  "pandas": "2.3.3",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "runtime_s": 8.769336223602295,
+  "structure": {
+    "30": {
+      "raw_median_e": 1.8497544054221329,
+      "centered": true,
+      "n": 1286,
+      "k_week": 369,
+      "k_cluster": 705,
+      "mean_e": -0.20206135703608571,
+      "sd_e": 1.2367946557158362,
+      "med_abs_e": 0.2473512861954651,
+      "icc_week_e": 0.1322864357710914,
+      "icc_cluster_e": 0.7409756980283738,
+      "icc_week_abs": 0.140388460579081,
+      "icc_cluster_abs": 0.801463690516217,
+      "DE_week": 1.3287443403850698,
+      "DE_cluster": 1.6106480575240925,
+      "n_eff": 798.4363772038782,
+      "frac_eccentric": 0.29237947122861585,
+      "med_abs_e_ecc": 0.6489455664982031,
+      "med_abs_e_circ": 0.17887198716816854
+    },
+    "14": {
+      "raw_median_e": 1.855739038062893,
+      "centered": true,
+      "n": 1410,
+      "k_week": 370,
+      "k_cluster": 750,
+      "mean_e": -0.12322424050117498,
+      "sd_e": 1.1756395814239133,
+      "med_abs_e": 0.23600813237709217,
+      "icc_week_e": 0.10624748462452005,
+      "icc_cluster_e": 0.8647350834815228,
+      "icc_week_abs": 0.11571926197072631,
+      "icc_cluster_abs": 0.9079142280366773,
+      "DE_week": 1.2986415784040564,
+      "DE_cluster": 1.76096687346374,
+      "n_eff": 800.6964930729193,
+      "frac_eccentric": 0.2560283687943262,
+      "med_abs_e_ecc": 0.7610531992174066,
+      "med_abs_e_circ": 0.18719451031659462
+    }
+  }
+}

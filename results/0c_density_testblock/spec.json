@@ -1,0 +1,44 @@
+{
+ "seed": 20261114,
+ "sims": 2000,
+ "bootstrap": 199,
+ "alpha_one_sided": 0.025,
+ "smallest_pct": 5.0,
+ "effects": [
+  2.5,
+  5,
+  7.5,
+  10,
+  15,
+  25
+ ],
+ "rhos": [
+  0.6,
+  0.8,
+  0.95
+ ],
+ "iccs": [
+  0.0,
+  0.3,
+  0.6
+ ],
+ "absorb": [
+  0.5,
+  0.8
+ ],
+ "layout": {
+  "30": {
+   "storms": 13,
+   "total": 327,
+   "maxsize": 70
+  },
+  "14": {
+   "storms": 12,
+   "total": 240,
+   "maxsize": 51
+  }
+ },
+ "verdict": "DESCRIPTIVE ONLY (fails the pre-set rule)",
+ "pq": "data/frozen/modelA_train.parquet",
+ "pq_sha256": "519df726d31ca9943760be4885c50faa9ff143b62d8e80e678ac7a56771e2f23"
+}
