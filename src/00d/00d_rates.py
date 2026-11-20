@@ -25,4 +25,4 @@ for ax,o in zip(axs.ravel(),IDS):
     lo,hi=np.nanpercentile(pd.concat([dP,dA]),[1,99]); ax.set_ylim(min(lo,-8),max(hi,3))
     print(f"{o}: hits {int(hit.sum())}, recovered within 3 records {rec} (noise-like), persistent {int(hit.sum())-rec}")
     ax.set_title(str(o),fontsize=9); ax.legend(fontsize=6)
-fig.savefig("results/0d/checks/flagged6_rates.png",dpi=110,bbox_inches="tight")
+fig.savefig("results/00d/checks/flagged6_rates.png",dpi=110,bbox_inches="tight")

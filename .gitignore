@@ -26,3 +26,8 @@ data/frozen/tle_parsed/
 data/frozen/tle_merged.csv
 data/frozen/tle_merged_dupfilt.csv
 data/frozen/tle2024_pilot_records.csv
+
+# TLE-derived data in frozen (re-pull with own credentials; hashes in CHECKSUMS.txt)
+data/frozen/candidates.csv
+data/frozen/modelA_train.parquet
+data/frozen/pilot_ids.csv

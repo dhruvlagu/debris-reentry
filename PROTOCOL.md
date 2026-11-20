@@ -1,7 +1,8 @@
 # Calibrated Reentry Forecasting for Uncontrolled Low Earth Orbit Objects
 
-**Research Protocol (v4, aero-first)**
+**Research Protocol (v5, aero-first)**
 Category: Physical Science and Engineering. Project type: Engineering with Data Analysis.
+Protocol amendments are logged in Section 6.3 (items 1 to 5), Section 6.5 (items 1 to 12), and Section 6.6 (items 25 to 35).
 
 This protocol is binding. Every threshold, rule, and metric below is written and dated before the results it governs are seen. Deviations are logged in the project notebook with date and reason. Locked items are never edited silently.
 
@@ -76,7 +77,7 @@ Environmental and policy motivation (orbital debris as a shared-resource problem
 ### 6.1 Closest prior work
 
 - **Leonid Space (Shambaugh, arXiv 2601.02453):** 934 deorbited objects, three scenarios that remove hindsight in stages (perfect knowledge, known weather with estimated drag, forecast weather), with probabilistic forecasts scored by CRPS and a calibration score. As I read it, it tests a single 1-year horizon, ends the forecast at a 300 km semi-major axis rather than at decay time, tunes dispersion on the same test set, reports no breakdown by space-weather regime, and keeps its ballistic-coefficient method proprietary.
-- **Pardini and Anselmo (2018), IADC reentry test campaigns:** about a +/-20% window was needed for 90% confidence and about +/-30% for 95%. Targets were mostly targets of opportunity.
+- **Pardini and Anselmo (2018), IADC reentry test campaigns:** about a +/-20% window was needed for 90% confidence and about +/-30% for 95%. Targets were mostly targets of opportunity. Read as abstract, highlights, and introduction only; full text unread.
 - **Space-Track operational predictions (TIP messages):** the operational reference. They begin only a few days before decay.
 - **Conformal prediction in the space domain:** adaptive conformal inference guarantees long-run coverage under distribution shift, as I read it marginally and not conditional on regime. I found no work applying conformal prediction to reentry timing. The search was limited, so this is not proof of absence.
 - **ESA and related density-model studies (Stevenson 2018; Bastida Virgili 2021; Briden 2022):** compared density models by reentry timing and found no consistently superior model near reentry. Briden used 3 objects. I found no regime-resolved comparison. Gondelach (2017) is cited via other papers, not yet read (marked per the rule below as unread until read in full).
@@ -88,7 +89,7 @@ Works I have only seen cited in another paper's bibliography are not cited here 
 - Horizons of 30 days or less, forecasting to the actual decay time.
 - Interval coverage resolved by space-weather regime.
 - Density-model comparison by space-weather regime (primary); three-input error budget is supporting only, because BC-density confounding is documented (Briden 2022; Leonid; Gondelach 2017) and two contrasts overlap Leonid.
-- Comparison against Space-Track predictions where they exist and against a fixed +/-20% rule.
+- Comparison against a fixed +/-20% rule and internal baselines (Model A, centered Model A). Space-Track operational comparators dropped per PREREG Amendments 16/20 and 34 for lack of verified point-in-time overlap at 30 d and 14 d horizons.
 - An open, point-in-time, reproducible evaluation. This is a supporting contribution only.
 - "Space-weather forecast skill is the bottleneck" is not a headline unless this project's own data support it.
 
@@ -120,13 +121,21 @@ These amendments were written post hoc on 11/03/2026, following the 10/30/2026 l
 11. Updated Appendix F Step 0A requirements (full citation, date read, read-in-full vs bibliography-only, amendment list including +/-20% baseline) and Step 14 requirements (both variants a and b reported).
 12. Bumped protocol header version from v3 to v4.
 
-### 6.6 Amendments adopted 11/14/2026
+### 6.6 Amendments adopted 11/14/2026 to 11/19/2026
 
-Note: Renumbered 11/16/2026 to avoid collision with Sec 6.5 and PREREG.md numbering.
+Note: Numbered in a single unified sequence (25 to 35) aligned with PREREG.md and notebook entries.
 
-28. Clarified Sections 8 and 9.0B that the same flat minimum of 3 tracking records created in the 14 days before issue applies in every altitude band; report retention by band. This resolves the internal wording conflict without changing the existing numeric minimum.
-29. Kept primary 0C estimates training-only and permitted validation data only for a separately labeled ICC sensitivity, with no calibration or tuning. This deviation is reported separately from the primary analysis.
-30. (11/16/2026) Signature B dropped after failing its debris false-positive criterion; see PREREG.md Amendment 30.
+25. (11/12/2026) Retained TLE records that lack checksums (short records, mostly 2015 to 2020). Reason: excluding them would remove most historical tracking data from 2015 to 2020. Overlap checks showed 99.01% to 99.74% agreement; checksum-valid records are kept on conflict. Could affect tracking counts and label timing.
+26. (11/12/2026) Excluded 510 objects decaying in 2026 from in-scope candidates (5,601 retained, 2015 to 2025). Reason: yearly bundle tle2026 is unpublished and incomplete; candidates decaying in 2026 lack full-year tracking history. Could affect test block size and candidate counts.
+27. (11/12/2026) Duplicate-removal rule restricted to objects with eccentricity at or below 0.01. Reason: original near-circular noise threshold was invalid for eccentric orbits. Removed 111 additional rows without changing scored object counts. Could affect TLE counts for eccentric objects only.
+28. (11/16/2026) Clarified Sections 8 and 9.0B that the same flat minimum of 3 tracking records created in the 14 days before issue applies in every altitude band; report retention by band. Resolves wording conflict without changing numeric minimum.
+29. (11/16/2026) Kept primary 0C estimates training-only and permitted validation data only for a separately labeled ICC sensitivity, with no calibration or tuning.
+30. (11/16/2026) Signature B dropped after failing its debris false-positive criterion (18.2% vs 5% threshold); scored population uses Signature A only. Date `00b_stepB.py apply` was first run: 11/07/2026.
+31. (11/19/2026) Defined governing label-noise statistic, formula, and per-horizon tolerance: gap-dependent uncertainty statistic, noise = max(12.0 h, 0.20 * gap_h). Formula: noise = max(12.0, 0.2 * gap_h). Tolerance is 72.0 h at 30 d, 33.6 h at 14 d, 16.8 h at 7 d (10% of horizon). Reason: reconcile definition in text with calculation in code and results. Could affect horizon selection gate and retained horizon set.
+32. (11/19/2026) Final-test statistical inference rule for primary paired model comparison. Resolves D3. Sidedness: one-sided. Significance level: alpha = 0.05. Resampling unit: paired dual bootstrap by decay week and parent cluster. Test statistic: relative reduction in median absolute log error, 1 - (median |log(e_cand)| / median |log(e_base)|). Reason: reconcile Section 8 binding rule 6 with 0C practice before Step 6. Could affect statistical significance determinations on final test.
+33. (11/19/2026) Step 0C item 10 (density-by-regime power evaluation, variants a and b) deferred to post-Step 4 under D1/D2. If power at the 5% smallest meaningful difference in median absolute log error is under 80% using the disturbed storm sample size, the RQ2 headline is reported as descriptive only. Reason: requires physics Models B and C across density models and BC variants. Could affect RQ2 headline status.
+34. (11/19/2026) Space-Track comparator 60day_msg dropped for lack of verified point-in-time overlap at retained horizons (30 d and 14 d). Reason: TIP comparator was dropped for lack of overlap, and 60day_msg overlap remains unverified. Evaluation relies on internal baselines: Model A, centered Model A, and fixed +/-20% interval rule. Could affect Test Plan B and secondary comparator reporting.
+35. (11/19/2026) Repository handling of raw data under data/frozen: untrack and gitignore data/frozen raw TLE files, keeping them local and relying on CHECKSUMS.txt for verification. Reason: Space-Track redistribution terms remain unverified; raw TLE-derived data should not be tracked remotely without verified permission. Could affect repository structure and open data dissemination.
 
 ## 7. Design criteria and constraints
 
@@ -163,7 +172,7 @@ Written before any modeling.
 3. **The final test block is opened once.** Any model change afterward is a new development cycle and needs a new untouched period.
 4. **No tuning on the final test.**
 5. **Pre-commitment:** thresholds, regimes, exclusion rules, metrics, and split are written, dated, and version-tagged before any result that could influence them exists.
-6. **Cluster-aware statistics:** confidence intervals use block bootstrap by week. Objects decaying in the same storm are not treated as independent.
+6. **Cluster-aware statistics:** confidence intervals and hypothesis tests use a paired dual block bootstrap by decay week and parent cluster, with one-sided alpha = 0.05, and test statistic defined as relative reduction in median absolute log error (Amendment 32, resolving D3). Objects decaying in the same storm are not treated as independent.
 7. **Paired comparisons** on identical objects and issue times.
 8. **All pre-specified metrics are reported,** including unfavorable ones, with confidence intervals.
 9. **Reproducibility:** frozen inputs with checksums, pinned library versions, recorded seeds, and a verified fresh-run reproduction.
@@ -192,7 +201,7 @@ Open verification items: Space-Track redistribution terms; bulk historical decay
   - Count every exclusion.
 - **Tracking-history requirement:** apply the same flat minimum of 3 records created in the 14 days before issue in every altitude band. Three altitude bands are measured at each horizon's issue time; report retention by band, which objects the requirement removes, and the resulting scope.
 - Report counts by year, object class, altitude band, size, and regime, plus tracking coverage and the number of **distinct storm events** (Section 8). Count Kp of 6 or more events by year from GFZ data and check whether regime is confounded with solar-cycle phase.
-- **Label-noise gate:** compare official decay times with the last tracking record. The resolution of a horizon is defined as 20% of that horizon. Drop any horizon where label noise exceeds half its resolution for more than 25% of objects.
+- **Label-noise gate:** compare official decay times with the last tracking record. The resolution of a horizon is defined as 20% of that horizon. Tolerance is half of horizon resolution (10% of horizon: 72.0 h at 30 d, 33.6 h at 14 d, 16.8 h at 7 d). Label-noise statistic is defined per Amendment 31 as the gap-dependent uncertainty statistic, noise = max(12.0, 0.2 * gap_h), where gap_h is the elapsed time from the last tracking record to the official decay label. Drop any horizon where label noise exceeds tolerance for more than 25% of objects.
 - **Provisional thresholds** (justified or revised by 0C, with revisions logged):
   - at least 300 usable decays in total
   - after the three-way split, at least 100 in the final test block
@@ -210,7 +219,7 @@ Use training-period data for all primary estimates. A separately labeled ICC sen
 7. Test whether arms 1 and 2 are distinguishable at each horizon. If they are not, arm 2 is reported as equivalent to arm 1 at those horizons.
 8. Compute the detectable size of each error-budget contrast in Test Plan D.
 9. Justify, with sources, why a 15% improvement would matter for reentry forecasting.
-10. Compute power and minimum detectable difference for the density-by-regime contrast, in both variants (a) and (b), using the disturbed-regime effective sample size (storms, not objects).
+10. Compute power and minimum detectable difference for the density-by-regime contrast, in both variants (a) and (b), using the disturbed-regime effective sample size (storms, not objects). Deferred to after Step 4 under D1/D2 and Amendment 33 because it requires Models B and C across density models and BC variants.
 11. Pre-stated smallest meaningful density-model difference: 5% in median absolute log error at any horizon (paired, same objects and issue times), within a regime. Basis: Pardini and Anselmo (2018) needed about a +/-20% window for 90% confidence, so a density-model swap that shifts median error by 5% moves the forecast by a quarter of that operational uncertainty window. A smaller shift is inside the noise operators already budget for. The 5% threshold is my judgment, set before any results exist, and is not taken from a source.
 
 Real held-out errors are never edited to manufacture power.
@@ -218,7 +227,7 @@ Real held-out errors are never edited to manufacture power.
 **Decision rule, fixed in advance:** if power is under 80% for a 15% improvement, first test whether a narrower question (one object class, or short horizons only) is detectable and worthwhile. If none is, the project is not pursued in its current form. If power for the primary density-by-regime contrast is under 80% for the pre-stated smallest meaningful density-model difference (5% in median absolute log error), RQ2 is reported as descriptive only and this is stated in the headline.
 
 ### 0D. Walking skeleton
-Run the entire pipeline on about 25 objects: data pull, decay label, space-weather join, forecasts, intervals, coverage scoring. All checks must pass:
+Run the entire pipeline on about 25 objects: data pull, decay label, space-weather join, forecasts, intervals, coverage scoring. The 0D walking skeleton ran Model A with a fixed +/-20% interval and no space-weather join (D7); Check 5 evaluates Model A's altitude fit and reruns with Model B after Step 4. All checks must pass:
 1. Every forecast uses only records published before its issue time.
 2. Deleting outputs and rerunning from frozen inputs reproduces them.
 3. Manual inspection of 10 objects finds no controlled objects.
@@ -292,7 +301,7 @@ The headline is whichever statement the evidence supports. Pre-written options:
 - Space-weather input reduced median error at horizon H by X%, with coverage of Y% (confidence interval Z).
 - Median accuracy improved, but intervals were not better calibrated.
 - Coverage improved only by widening intervals; the interval score was unchanged.
-- Intervals were calibrated in quiet conditions but overconfident in storms.
+- Intervals were calibrated in quiet conditions, while disturbed-regime coverage is reported as descriptive only.
 - Realistic inputs added little, while perfect foresight would help (only if the data support it).
 - Density models differed only in [regime], by X% (CI Z), with BC refit [absorbing / not absorbing] the difference.
 - No regime-resolved density-model difference detected; smallest detectable difference stated.
@@ -358,27 +367,27 @@ For each contrast, report the reduction in median absolute log error by horizon 
 
 ---
 
-# Part II: Working Appendix (operating rules and AI context)
+# Part II: Methodological Appendix & Research Integrity
 
-This appendix governs how the work is carried out and how AI assistance is used.
+This appendix governs research execution standards, repository organization, and research integrity.
 
-## A. Role of AI assistance
+## A. Research Integrity & AI Assistance Policy
 
-AI tools are used for brainstorming, code review, and checking methodology. All design decisions, code execution, analysis, and interpretation are carried out and understood by me. Any AI-suggested content is verified before use.
+Generative AI tools are utilized solely for literature discovery, initial syntax drafting, and sanity-checking methodology. All design decisions, mathematical modeling, code implementation, simulation execution, and scientific interpretations are independently conducted and verified by the author.
 
-**Rules for AI assistants working on this project**
-1. Never propose using final-test data for tuning, feature choice, threshold choice, or model selection.
-2. Never fabricate data, citations, counts, or results. If a number is unknown, say so and give the query or script that would produce it.
-3. Always flag possible temporal leakage.
-4. Treat objects decaying in the same storm as correlated, not independent.
-5. Do not change any locked item. Propose a logged amendment instead.
-6. Treat negative and null results as valid. Do not steer toward a headline.
-7. Keep the aerospace physics primary. Do not propose replacing the physics model with a black-box model, and treat data science as the method for measuring the physics.
-8. Never present oracle inputs (perfect-foresight space weather, hindsight ballistic coefficient) as forecast performance.
-9. Check data-provider terms before suggesting redistribution of raw data.
-10. State which Step and gate any implementation belongs to.
-11. Verify libraries, API field names, and dataset schemas against current documentation.
-12. Writing style: plain and direct, concise, no em dashes.
+**Methodological and Research Constraints**
+1. Final-test data is strictly sealed against tuning, feature selection, threshold calibration, or model choice.
+2. No data, citations, sample sizes, or empirical outcomes are ever fabricated; unverified values are tagged and investigated via reproducible scripts.
+3. Temporal leakage is strictly guarded against at all forecast issue times.
+4. Objects decaying in the same geomagnetic storm are modeled as correlated clusters, never as independent observations.
+5. Locked protocol items are immutable; any necessary procedural evolution is recorded as a numbered amendment with justification.
+6. Negative and null findings are reported with equal weight to positive findings without steering toward preconceived headlines.
+7. Orbital mechanics and atmospheric physics govern the forecasting methodology; data science and conformal prediction serve as empirical evaluation tools.
+8. Oracle benchmarks (perfect-foresight space weather, hindsight ballistic coefficients) are restricted to diagnostic bounds and never claimed as operational forecast skill.
+9. Data provider licensing and redistribution terms are verified prior to data dissemination.
+10. All scripts and outputs map explicitly to their corresponding protocol step.
+11. Pinned library versions, API schemas, and astronomical constants are validated against primary references.
+12. Presentation style is plain, objective, direct, and concise.
 
 ## B. Repository and notebook structure
 
@@ -387,7 +396,7 @@ AI tools are used for brainstorming, code review, and checking methodology. All 
 /PREREG.md         pre-committed thresholds, rules, metrics, split dates
 /CHECKSUMS.txt     SHA-256 for every frozen data file
 /data/raw/         gitignored (provider terms)
-/data/frozen/      parquet snapshots
+/data/frozen/      parquet snapshots (raw TLE-derived files untracked and gitignored per Amendment 35)
 /src/              numbered scripts: pull, counts, power simulation,
                    skeleton, models A/B/C, conformal, evaluation,
                    error budget
@@ -425,16 +434,16 @@ Filled and tagged before the step that depends on them.
 
 ```
 Kill rule text:                             [Step 0A]
-Uncontrolled filter, final form (fleets, CubeSats, maneuver signature):  [Step 0B]
+Uncontrolled filter, final form (fleets, CubeSats, maneuver signature):  exclude Starlink/OneWeb/Iridium/active payloads, exclude CubeSat fleets, exclude Signature A (SMA rise > 5*sigma_a on 3+ consecutive sets for near-circular objects), exclude controlled decays; Signature B dropped (Amendment 30)
 Altitude bands and history requirement per band:        [Step 0B]
 Regime thresholds (Kp):                     disturbed >= 6, moderate 5 to <6, quiet <5 (locked)
 Storm event definition:                     Kp >= 6 blocks merged within 48 h; 12 h and 24 h as sensitivity (locked)
 Horizon resolution and label-noise rule:    resolution = 20% of horizon; drop if noise > half of it for > 25% of objects (locked)
-Horizons kept after label-noise gate:       [Step 0B]
+Horizons kept after label-noise gate:       30 d, 14 d
 Thresholds (total / test / disturbed):      300 / 100 / 40, with 15 in test (provisional)
 Power rule:                                 >= 80% at 15% effect, else narrow or switch (locked)
 Smallest meaningful density difference:     5% in median absolute log error [Step 0C]
-Primary test:                               paired, block bootstrap by week, alpha 0.05
+Primary test:                               paired dual block bootstrap by decay week and parent cluster, one-sided alpha = 0.05, test statistic: relative reduction in median absolute log error (Amendment 32, resolving D3)
 Primary contrast definition (density by regime): [Test Plan D]
 BC-refit vs BC-frozen variants:             [Test Plan D]
 Arm 2 definition and window:                [Step 3]
@@ -447,7 +456,7 @@ Ballistic coefficient window / min records / poor-fit rule: [Step 4]
 Hindsight ballistic coefficient definition (diagnostic only): [Step 4]
 Fixed +/-20% rule definition:               [Step 4]
 Conformal procedure and assumptions:        [Step 5]
-Split dates (train / validation / test):    [Step 5]
+Split dates (train / validation / test):    train = 2015-01-01 to 2022-12-31; validation = 2023-01-31 to 2024-12-31; final test = 2025-01-31 to 2025-12-31 (with 30-day embargo at each boundary)
 Final model specification:                  [Step 9, tag lock-v1]
 ```
 
@@ -462,12 +471,12 @@ Halt and log if any occurs:
 - The Step 6 checkpoint shows error structure far from the Step 0C assumptions (rerun 0C first).
 - A frozen-input rerun fails to reproduce.
 
-## E. Interview preparation
+## E. Project Summary & Oral Defense Framework
 
-- One sentence: "I predict when dead satellites fall, find which piece of the physics limits the forecast, and test whether my error bars are honest."
-- Open with the Step 7 failure and what changed in Step 8.
-- Be ready to explain: the decay equation and what each term does; why drag changes with space weather; why ballistic coefficient and density are confounded; what the oracle diagnostics are and are not; why a random split was rejected; why same-storm objects are not independent; and what the power analysis would have told me if it had failed.
-- Notebook pages to submit: Step 1, the Step 7 failure, one test-plan run, and the Step 15 sensitivity analysis.
+- Core scientific premise: "I forecast uncontrolled satellite reentry timing under space-weather uncertainty, identify which physical mechanisms limit forecast horizon, and empirically validate prediction interval honesty."
+- Key presentation pivot: open with the Step 7 validation failure and the physical redesign applied in Step 8.
+- Fundamental theoretical defenses: the orbital decay equation and atmospheric drag forces; space-weather coupling to thermospheric density; ballistic coefficient and atmospheric density confounding; oracle diagnostics vs. true causal forecasts; rejection of randomized cross-validation in favor of chronological blocking; storm-level clustering design effects; and simulation-based statistical power justification.
+- Primary evidence selection: Step 1 pre-commitments, Step 7 diagnostic failure, Test Plan D primary contrast run, and Step 15 one-factor-at-a-time sensitivity analysis.
 
 ## F. Required notebook content by step
 

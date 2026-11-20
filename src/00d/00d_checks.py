@@ -18,7 +18,7 @@ from scipy.stats import theilslopes
 PQ = "data/frozen/modelA_train.parquet"
 TLE = "data/frozen/tle_merged_dupfilt.csv"
 CAND = "data/frozen/candidates.csv"
-SEL = "results/0d/selection.json"
+SEL = "results/00d/selection.json"
 BUILDER = "src/00c_build_modelA.py"
 P = dict(window_d=10.0, lag_h=24.0, min_sets=3, decay_alt_km=120.0, ecc_cut=0.01,
          re_km=6378.137, min_days=0.5, cap_days=365.0)
@@ -143,7 +143,7 @@ def run_core(outdir, ids, pq, tle, cand):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--scored", nargs="+")
-    ap.add_argument("--outdir", default="results/0d/checks")
+    ap.add_argument("--outdir", default="results/00d/checks")
     ap.add_argument("--sel", default=SEL)
     ap.add_argument("--no-check2", action="store_true")
     a = ap.parse_args()

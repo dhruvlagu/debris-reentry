@@ -7,7 +7,7 @@ N_TOTAL = 25
 HORIZON = 30
 SRC = "data/frozen/modelA_train.parquet"
 CAND = "data/frozen/candidates.csv"
-OUT = "results/0d/selection.json"
+OUT = "results/00d/selection.json"
 
 df = pd.read_parquet(SRC)
 cand = pd.read_csv(CAND, low_memory=False)
